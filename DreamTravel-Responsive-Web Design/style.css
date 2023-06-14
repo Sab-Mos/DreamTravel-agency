@@ -1,0 +1,893 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --shadow: 0px 1px 1px black;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+
+  font-size: 1rem;
+}
+
+/* Home Page Styling */
+.home-body {
+  background-image: url("images/DreamTravel-homepage-img-2.jpg");
+  background-blend-mode: darken;
+  background-color: #fff7ef;
+  background-position: 0px -70px;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2.5rem;
+  height: 70px;
+}
+
+.wrapper .main-nav {
+  display: flex;
+  gap: 50px;
+}
+
+.wrapper h1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.4rem;
+}
+
+.wrapper .current {
+  color: #eb4d5f;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 0.3rem;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.main-nav ul li a:hover:not(.active) {
+  opacity: 0.6;
+  color: black;
+}
+
+.contact-btn {
+  padding: 0.6rem 0.8rem;
+  border-radius: 20px;
+  background-color: #eb4d5f;
+}
+
+.contact-btn:hover:not(.active) {
+  color: black;
+  background-color: #f77281;
+  box-shadow: var(--shadow);
+}
+
+.main-nav .social {
+  display: flex;
+  margin-top: 0.8rem;
+  gap: 30px;
+}
+
+.main-nav .social i {
+  color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  transition: 0.9s;
+  border: 2px solid white;
+}
+
+.main-nav .social i:hover {
+  background: white;
+  color: black;
+  box-shadow: var(--shadow);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h2 {
+  margin-top: 10rem;
+  font-size: 2.3rem;
+  text-align: center;
+  color: white;
+}
+
+header h2::after {
+  content: "";
+  display: block;
+  margin: 1.9rem auto;
+  width: 500px;
+  height: 4px;
+  background-color: #eb4d5f;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0.7rem;
+  transition: 0.5s;
+  color: white;
+  display: block;
+}
+
+header a:hover {
+  box-shadow: var(--shadow);
+  background-color: white;
+  color: rgb(53, 53, 53);
+}
+
+/* Services page styling */
+
+.services-top-container {
+  background-image: url("images/DreamTravel-service-img-1.jpg");
+  min-height: 500px;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: #c3c3c3;
+}
+
+.services-header-and-form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.services-header-and-form header h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.services-header-and-form header p {
+  font-size: 1.3rem;
+  color: white;
+  opacity: 75%;
+}
+
+.services-header-and-form form {
+  display: flex;
+  gap: 30px;
+}
+
+.services-header-and-form form input {
+  font-size: 1rem;
+  width: 250px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+  border: none;
+}
+
+.services-header-and-form form input:hover {
+  background-color: #f2f1f1;
+}
+
+.services-header-and-form form .services-btn a {
+  border-radius: 0px;
+  color: white;
+  border-color: white;
+}
+
+.destination-box-heading {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.destination-box-heading h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.destination-box-heading p {
+  font-size: 1.3rem;
+  color: #c4561f;
+  font-style: italic;
+}
+
+.destination-box {
+  margin: 1.2rem;
+  display: grid;
+  justify-items: center;
+  gap: 20px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.city-box {
+  box-shadow: var(--shadow);
+  background-color: #1a4173;
+  display: flex;
+  transition: 0.8s;
+  flex-direction: column;
+  position: relative;
+}
+
+.city-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 1.5px 5px #2e2e2e;
+}
+
+.city-box:hover .city-box-inner-container {
+  background-color: #eb4d5f;
+  color: white;
+}
+
+.city-box img {
+  width: 100%;
+  height: 300px;
+}
+
+.city-box .city-box-inner-container {
+  display: grid;
+  justify-items: end;
+  column-gap: 120px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.5rem;
+  color: white;
+  background-color: rgba(75, 75, 75, 0.4);
+  transition: 0.8s;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.city-box .city-box-inner-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* About page styling */
+
+.about-top-container {
+  background-image: url("images/DreamTravel-homepage-img-3.jpg");
+  min-height: 800px;
+  background-blend-mode: darken;
+  background-color: #b3b0b0;
+  background-size: cover;
+  color: white;
+}
+
+.about-top-cont-wrapper {
+  display: grid;
+  column-gap: 30px;
+  margin: 7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-top-cont-wrapper div {
+  border: 2px solid #f77281;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  transition: 0.7s;
+}
+
+.about-top-cont-wrapper div:hover {
+  background-color: rgba(252, 252, 252, 0.6);
+  color: #3a3939;
+}
+
+.about-top-cont-wrapper div h3 {
+  font-size: 2rem;
+}
+
+.about-top-cont-wrapper div p {
+  font-size: 1.2rem;
+}
+
+.newsletter {
+  border: 5px solid #2e2e2e;
+  background-color: #f6f3ef;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.newsletter h2 {
+  font-size: 1.5rem;
+}
+
+.newsletter p {
+  font-size: 1.2rem;
+}
+
+.newsletter .subscribe-text {
+  display: none;
+}
+
+.newsletter input {
+  margin: 0rem 1.5rem;
+}
+
+.newsletter .newsletter-btn a {
+  border-radius: 0;
+}
+
+.value-section {
+  min-height: auto;
+  background-image: url("images/DreamTravel-home-page-img-1.jpg");
+  background-position: -100px;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: #fc6879;
+}
+
+.value-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  padding-top: 2rem;
+  display: block;
+}
+
+.value-section-heading::after {
+  content: "";
+  display: block;
+  margin: 0.8rem auto;
+  height: 4px;
+  width: 300px;
+  background-color: #eb4d5f;
+}
+
+.core-values-container {
+  display: grid;
+  gap: 25px;
+  padding: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.values-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #eb4d5f;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(252, 252, 252, 0.5);
+  transition: 0.8s;
+}
+
+.values-box:hover {
+  background-color: #1a4173;
+  color: white;
+  border-color: #1a4173;
+}
+
+.values-box img {
+  width: 100%;
+}
+
+.values-box h3 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.values-box p {
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.about-achievements {
+  background-color: #404164;
+  display: grid;
+  gap: 25px 30px;
+  min-height: 200px;
+  padding: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+.about-achievements div {
+  display: grid;
+  row-gap: 15px;
+  text-align: center;
+}
+
+.about-achievements div i {
+  border: 10px solid #eb4d5f;
+  border-radius: 50%;
+  text-align: center;
+  padding: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.about-achievements div p {
+  color: rgb(248, 205, 126);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.about-achievements div h2 {
+  color: white;
+}
+
+/* Blog styling */
+
+.our-blog {
+  padding: 1.5rem;
+}
+
+.our-blog .blog-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.our-blog .blog-heading h2 {
+  font-size: 2rem;
+}
+
+.our-blog .blog-heading h2::after {
+  content: "";
+  display: block;
+  background-color: #f77281;
+  height: 5px;
+  width: 200px;
+  margin: 0.5rem auto;
+}
+
+.our-blog .blog-heading p {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.our-blog .our-blog-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.our-blog .our-blog-articles .blog-box {
+  background-color: rgb(235, 220, 220);
+  line-height: 2;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+}
+
+.our-blog .our-blog-articles .blog-box img {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  transition: 0.6s;
+  opacity: 0.7;
+}
+
+.our-blog .our-blog-articles .blog-box:hover img {
+  opacity: 1;
+}
+
+.blog-box .blog-box-wrapper {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.blog-box .blog-box-wrapper .blog-post-time {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 200px;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem;
+  background-color: #2195c3;
+}
+
+.blog-box .blog-box-wrapper .blog-article a {
+  font-size: 1.4rem;
+  color: #041f43;
+  font-weight: bold;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.blog-box .blog-box-wrapper .blog-article a:hover {
+  color: #c4561f;
+}
+
+.blog-box .blog-box-wrapper .blog-article p {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.paris-blog-top-container {
+  background-image: url("images/paris-blog-img-1.jpg");
+  min-height: 500px;
+  background-size: cover;
+  background-position: center -380px;
+  background-blend-mode: darken;
+  background-color: #acacac;
+}
+
+.paris-blog-top-container header {
+  margin: 9rem auto;
+  text-align: center;
+}
+
+.paris-blog-top-container header h1,
+.paris-blog-top-container p {
+  padding: 0.5rem;
+  color: white;
+}
+
+.paris-blog-top-container h1 {
+  font-size: 2.5rem;
+}
+
+.paris-blog-top-container p {
+  font-size: 1.6rem;
+}
+
+.paris-blog-bottom-container {
+  display: grid;
+  padding: 1.5rem;
+  row-gap: 40px;
+  background-color: #fff1ea;
+}
+
+.paris-blog-bottom-container p:first-child {
+  font-size: 1.45rem;
+  opacity: 0.8;
+  color: #2e2e2e;
+}
+
+.paris-blog-bottom-container p:first-child::before {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 250px;
+  background-color: #c4561f;
+  margin: 0rem auto 1rem;
+}
+
+.paris-blog-bottom-box {
+  line-height: 1.7;
+  display: grid;
+  row-gap: 20px;
+}
+
+.paris-blog-bottom-box h3 {
+  font-size: 1.6rem;
+  color: #c4561f;
+  margin: 0px auto;
+}
+
+.paris-blog-bottom-box img {
+  width: 80%;
+  margin: 0.8rem auto;
+}
+
+.paris-blog-bottom-box p {
+  font-size: 1.3rem;
+}
+
+.new-york-top-container {
+  background-image: url("images/new-york-blog-img-1.jpg");
+  background-blend-mode: darken;
+  background-color: #68778b;
+}
+
+.new-york-bottom-container {
+  background-color: #edddff;
+}
+
+.munich-top-container {
+  background-image: url("images/munich-blog-img-1.jpg");
+  background-position: center center;
+}
+
+/* Contact page styling */
+
+.contact-body {
+  background-image: url("images/DreamTravel-homepage-img-4.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: #dadada;
+}
+.contact-nav-link:hover {
+  color: black;
+}
+
+.contact-wrapper {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 50px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: rgba(240, 240, 240, 0.8);
+  transition: 0.6s;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+.contact-form:hover {
+  background: rgba(240, 240, 240, 0.9);
+}
+
+.contact-form input,
+.newsletter input {
+  padding: 0.6rem;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: black;
+  outline: none;
+  background: transparent;
+  font-size: 1.1rem;
+  transition: 0.7s;
+}
+
+.contact-form input:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-form input::placeholder {
+  color: black;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.contact-form input:focus::placeholder,
+.services-header-and-form form input:focus::placeholder,
+.newsletter input:focus::placeholder {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.contact-pg-btn {
+  border: none;
+  background-color: transparent;
+  width: 150px;
+  margin: 0rem auto;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.contact-pg-btn a {
+  box-shadow: var(--shadow);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 0.8rem;
+  display: block;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+.contact-pg-btn a:hover {
+  color: white;
+  background-color: black;
+}
+
+.contact-boxes {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-boxes .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid #f77281;
+  transition: 0.6s;
+  background-color: rgba(252, 252, 252, 0.8);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.box:hover {
+  background-color: rgba(252, 252, 252, 0.9);
+}
+
+.box i {
+  color: #eb4d5f;
+}
+
+.box h2 {
+  font-size: 1.5rem;
+}
+
+.box p {
+  font-size: 1.2rem;
+}
+
+.contact-newsletter {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #eb4d5f;
+  padding: 1.8rem;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  /*navigation bar and newsletter media queries  */
+
+  .home-body {
+    background-image: url("images/home-page-media-queries-img.jpg");
+    background-blend-mode: darken;
+    background-color: #b5b5b5;
+    background-position: center;
+  }
+
+  .wrapper {
+    padding: 1.5rem;
+    flex-direction: column;
+  }
+
+  .wrapper .main-nav {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .main-nav ul {
+    gap: 40px;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .main-nav ul li a:hover:not(.active) {
+    opacity: 0.6;
+    color: rgb(222, 237, 242);
+  }
+
+  .main-nav .social {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  header h2 {
+    margin-top: 20rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  header h2::after {
+    display: none;
+  }
+
+  .newsletter p {
+    display: none;
+  }
+
+  .newsletter .subscribe-text {
+    font-size: 1.3rem;
+    display: unset;
+  }
+
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .newsletter form input {
+    width: 100%;
+    margin: 0rem auto;
+  }
+
+  /* Services media queries */
+
+  .services-top-container {
+    display: grid;
+    row-gap: 250px;
+    background-position: center;
+  }
+
+  .services-header-and-form {
+    margin: 4rem 0rem 1.5rem;
+  }
+
+  .services-header-and-form header h1 {
+    font-size: 2rem;
+  }
+
+  .services-header-and-form form {
+    flex-direction: column;
+  }
+
+  /* About page + Blog pages media queries */
+  .about-wrapper ul li a:hover:not(.active) {
+    opacity: 0.6;
+    color: rgb(0, 0, 0);
+  }
+
+  .about-top-container {
+    display: flex;
+    flex-direction: column;
+    gap: 320px;
+  }
+
+  .about-top-cont-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    margin: 1rem;
+  }
+
+  .about-top-cont-wrapper div p {
+    font-size: 1.5rem;
+  }
+
+  .our-blog .our-blog-articles {
+    grid-template-columns: 1fr;
+  }
+
+  .paris-blog-top-container {
+    background-position: center;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 200px;
+  }
+
+  .paris-blog-bottom-container .paris-blog-bottom-box img {
+    width: 100%;
+  }
+
+  /* Contact page media queries */
+
+  .contact-body {
+    background-position: 0px -100px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    margin-top: 21rem;
+  }
+
+  .contact-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-boxes .box {
+    padding: 1rem;
+  }
+}
