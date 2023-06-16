@@ -891,3 +891,12 @@ footer {
     padding: 1rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .services-header-and-form header {
+    margin: 1rem 1rem 0rem 2.5rem;
+  }
+  .core-values-container .values-box {
+    margin-right: 3rem;
+  }
+}
